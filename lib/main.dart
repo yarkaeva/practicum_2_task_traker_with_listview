@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart';
+import 'package:to_do_list_app/data/data.dart';
+import 'package:to_do_list_app/pages/home_page.dart';
 
 void main() {
   runApp(const App());
@@ -72,7 +73,7 @@ class App extends StatelessWidget {
       title: 'Flutter Demo',
       initialRoute: '/',
       routes: {
-        '/': (context) => const HomePage(),
+        '/': (context) => HomePage(newData: Data().data),
       },
     );
   }
